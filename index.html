@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Test</title>       
+        <link href="./styles.css" rel="stylesheet" type="text/css">
+    
+    </head>
+    <body>
+        <div class="container">
+            
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="topnav__link" id="topnav_link1" onclick="route(event)">Register with email</a>
+                <a href="#news" class="topnav__link" id="topnav_link2" onclick="route(event)">Register with mobile</a>               
+            </div>
+        
+            <div id="email-route">
+                <h1>Register with email</h1>
+
+                <form class="form">
+                    <fieldset>
+                        <legend>Please fill out the form below:</legend>
+                        <label>Enter email:</label>
+                        <input type="text" id="form__email">
+
+                        <hr/>
+
+                        <label>Currency:</label><br>
+                        <input type="radio" id="form__euro" name="currency" value="Euro" checked>
+                        <label for="euro">Euro</label>
+                        <input type="radio" id="form__dollar" name="currency" value="US Dollar">
+                        <label for="dollar">US Dollar</label>
+                        <input type="radio" id="form__pound" name="currency" value="British pound">
+                        <label for="pound">British pound</label>
+                        
+                        <hr/>
+
+                        <label>Do you accept terms and conditions:</label><br>
+                        <input type="checkbox" id="form__terms" name="terms">
+
+                        <hr/>
+
+                        <label>Check if you want to receive promo notifications:</label><br>
+                        <input type="checkbox" id="form__promo" >
+
+                        <hr/>
+
+                        <input type="button" id="form__submit" value="Submit" onclick="emailSubmit()">
+                       
+
+                    </fieldset>
+                </form>
+                <div>
+                    <img src="./spinner.gif" id="email-route__spinner">
+                </div>
+                <p id="email-route__request">Request is being processed</p>
+
+                <p id="email-route__error">Email address is not correct</p>
+
+                <p id="email-route__terms-error">Please confirm that you accept the terms and conditions</p>
+
+                <div id="reg">
+                    <p class="reg__text">You have been successfuly registered.</p>
+                    <p class="reg__text">Now you can proceed to login page</p>
+                </div>
+
+            </div>
+
+            <div id="phone-route">
+                <h1>Register with phone</h1>
+
+                <form class="form">
+                    <fieldset>
+                        <legend>Please fill out the form below:</legend>
+                        <label>Enter phone:</label>
+                        <input type="text" id="form__phone">
+
+                        <hr/>
+
+                        <label>Currency:</label><br>
+                        <input type="radio" id="form__euro2" name="currency" value="Euro" checked>
+                        <label for="euro">Euro</label>
+                        <input type="radio" id="form__dollar2" name="currency" value="US Dollar">
+                        <label for="dollar">US Dollar</label>
+                        <input type="radio" id="form__pound2" name="currency" value="British pound">
+                        <label for="pound">British pound</label>
+                        
+                        <hr/>
+
+                        <label>Do you accept terms and conditions:</label><br>
+                        <input type="checkbox" id="form__terms2" name="terms">
+
+                        <hr/>
+
+                        <label>Check if you want to receive promo notifications:</label><br>
+                        <input type="checkbox" id="form__promo2" >
+
+                        <hr/>
+
+                        <input type="button" id="form__submit2" value="Submit" onclick="phoneSubmit()">
+                       
+
+                    </fieldset>
+                </form>
+                <div>
+                    <img src="./spinner.gif" id="phone-route__spinner">
+                </div>
+                <p id="phone-route__request">Request is being processed</p>
+
+                <p id="phone-route__error">Phone number is not correct</p>
+
+                <p id="phone-route__terms-error">Please confirm that you accept the terms and conditions</p>
+
+                <div id="reg2">
+                    <p class="reg__text">You have been successfuly registered.</p>
+                    <p class="reg__text">Now you can proceed to login page</p>
+                </div>
+ 
+            </div>      
+        
+        </div>        
+
+        <script src="./script.js"></script>
+    </body>
+
+</html>
